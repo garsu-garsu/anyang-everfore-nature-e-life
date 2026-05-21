@@ -11,18 +11,45 @@
     "regulation": "투기과열지구 / 청약과열지역",
     "landType": "공공택지",
     "priceCap": "분양가상한제 적용",
-    "rules": { "재당첨제한": "10년", "전매제한": "3년", "거주의무": "없음" },
+    "shortLocation": "경기 안양 동안구 관양동",
+    "leafEmoji": "🌲",
+    "rules": {
+      "재당첨제한": "10년",
+      "전매제한": "3년",
+      "거주의무": "없음"
+    },
     "developer": {
       "공공시행자": "경기주택도시공사(GH)",
-      "민간사업자": ["디엘이앤씨㈜", "㈜태영건설", "금호건설㈜", "신동아종합건설㈜"]
+      "민간사업자": [
+        "디엘이앤씨㈜",
+        "㈜태영건설",
+        "금호건설㈜",
+        "신동아종합건설㈜"
+      ]
     },
     "moveInPlan": "2028년 08월 예정",
     "heroSubtitle": "전용 84㎡ 국민주택(공공분양) 344세대 · 청약 일정부터 분양가·자격까지 한곳에서 확인하세요.",
     "transport": [
-      { "icon": "🏙️", "title": "안양 관양동 도시개발사업지구", "desc": "관양고 주변 신규 개발 블록(A2BL) 내 공공분양 단지" },
-      { "icon": "🚇", "title": "인덕원역 생활권 (4호선·인덕원동탄선·GTX-C 예정)", "desc": "인덕원역 일대 광역교통망 확충 계획 지역" },
-      { "icon": "🛣️", "title": "과천대로·평촌 생활 인프라", "desc": "평촌 학원가·상권 및 주요 간선도로 접근" },
-      { "icon": "🏫", "title": "교육 · 녹지 환경", "desc": "관양고 인근, 자연 친화형 단지 컨셉" }
+      {
+        "icon": "🏙️",
+        "title": "안양 관양동 도시개발사업지구",
+        "desc": "관양고 주변 신규 개발 블록(A2BL) 내 공공분양 단지"
+      },
+      {
+        "icon": "🚇",
+        "title": "인덕원역 생활권 (4호선·인덕원동탄선·GTX-C 예정)",
+        "desc": "인덕원역 일대 광역교통망 확충 계획 지역"
+      },
+      {
+        "icon": "🛣️",
+        "title": "과천대로·평촌 생활 인프라",
+        "desc": "평촌 학원가·상권 및 주요 간선도로 접근"
+      },
+      {
+        "icon": "🏫",
+        "title": "교육 · 녹지 환경",
+        "desc": "관양고 인근, 자연 친화형 단지 컨셉"
+      }
     ],
     "officialSite": "https://www.elife.co.kr",
     "applyHome": "https://www.applyhome.co.kr",
@@ -32,89 +59,318 @@
       "period": "2026.05.01(금) ~ 05.14(목)",
       "hours": "10:00 ~ 17:00",
       "note": "2026.05.01(금)~05.10(일)은 사전방문예약제로 운영 / 견본세대는 84D 타입"
+    },
+    "adsense": {
+      "client": "ca-pub-5820924146818119"
     }
   },
   "schedule": [
-    { "id": "notice", "label": "입주자모집공고일", "date": "2026-04-30", "note": "청약자격 판단기준일" },
-    { "id": "special", "label": "특별공급 접수", "date": "2026-05-11", "note": "기관추천·다자녀·신혼부부·노부모·생애최초·신생아" },
-    { "id": "g1-local", "label": "일반공급 1순위 (해당지역)", "date": "2026-05-12", "note": "안양시 2년 이상 계속 거주자" },
-    { "id": "g1-other", "label": "일반공급 1순위 (기타지역)", "date": "2026-05-13", "note": "안양 2년 미만·서울·인천·경기 거주자" },
-    { "id": "g2", "label": "일반공급 2순위", "date": "2026-05-14", "note": "1순위 미해당 입주자저축 가입자" },
-    { "id": "result", "label": "당첨자 발표", "date": "2026-05-20", "note": "청약홈에서 확인" },
-    { "id": "docs", "label": "서류 접수", "date": "2026-05-29", "dateEnd": "2026-06-03", "note": "당첨자·예비입주자 서류 제출" },
-    { "id": "contract", "label": "계약 체결", "date": "2026-07-09", "dateEnd": "2026-07-11", "note": "공동주택·발코니확장·시스템에어컨 동시 계약" },
-    { "id": "movein", "label": "입주 예정", "date": "2028-08-01", "note": "2028년 08월 (공정에 따라 변동 가능)" }
+    {
+      "id": "notice",
+      "label": "입주자모집공고일",
+      "date": "2026-04-30",
+      "note": "청약자격 판단기준일"
+    },
+    {
+      "id": "special",
+      "label": "특별공급 접수",
+      "date": "2026-05-11",
+      "note": "기관추천·다자녀·신혼부부·노부모·생애최초·신생아"
+    },
+    {
+      "id": "g1-local",
+      "label": "일반공급 1순위 (해당지역)",
+      "date": "2026-05-12",
+      "note": "안양시 2년 이상 계속 거주자"
+    },
+    {
+      "id": "g1-other",
+      "label": "일반공급 1순위 (기타지역)",
+      "date": "2026-05-13",
+      "note": "안양 2년 미만·서울·인천·경기 거주자"
+    },
+    {
+      "id": "g2",
+      "label": "일반공급 2순위",
+      "date": "2026-05-14",
+      "note": "1순위 미해당 입주자저축 가입자"
+    },
+    {
+      "id": "result",
+      "label": "당첨자 발표",
+      "date": "2026-05-20",
+      "note": "청약홈에서 확인"
+    },
+    {
+      "id": "docs",
+      "label": "서류 접수",
+      "date": "2026-05-29",
+      "dateEnd": "2026-06-03",
+      "note": "당첨자·예비입주자 서류 제출"
+    },
+    {
+      "id": "contract",
+      "label": "계약 체결",
+      "date": "2026-07-09",
+      "dateEnd": "2026-07-11",
+      "note": "공동주택·발코니확장·시스템에어컨 동시 계약"
+    },
+    {
+      "id": "movein",
+      "label": "입주 예정",
+      "date": "2028-08-01",
+      "note": "2028년 08월 (공정에 따라 변동 가능)"
+    }
   ],
   "payment": {
-    "계약금": { "ratio": 0.1, "label": "계약금 10%", "when": "계약 시 (2026.07.09~07.11)" },
+    "계약금": {
+      "ratio": 0.1,
+      "label": "계약금 10%",
+      "when": "계약 시 (2026.07.09~07.11)"
+    },
     "중도금": {
       "ratio": 0.6,
       "label": "중도금 60% (6회 분납, 회차당 10%)",
       "installments": [
-        { "no": 1, "ratio": 0.1, "date": "2026-11-17" },
-        { "no": 2, "ratio": 0.1, "date": "2027-02-16" },
-        { "no": 3, "ratio": 0.1, "date": "2027-05-18" },
-        { "no": 4, "ratio": 0.1, "date": "2027-08-17" },
-        { "no": 5, "ratio": 0.1, "date": "2027-12-14" },
-        { "no": 6, "ratio": 0.1, "date": "2028-04-18" }
+        {
+          "no": 1,
+          "ratio": 0.1,
+          "date": "2026-11-17"
+        },
+        {
+          "no": 2,
+          "ratio": 0.1,
+          "date": "2027-02-16"
+        },
+        {
+          "no": 3,
+          "ratio": 0.1,
+          "date": "2027-05-18"
+        },
+        {
+          "no": 4,
+          "ratio": 0.1,
+          "date": "2027-08-17"
+        },
+        {
+          "no": 5,
+          "ratio": 0.1,
+          "date": "2027-12-14"
+        },
+        {
+          "no": 6,
+          "ratio": 0.1,
+          "date": "2028-04-18"
+        }
       ]
     },
-    "잔금": { "ratio": 0.3, "label": "잔금 30%", "when": "입주 시", "housingFund": 75000000, "housingFundNote": "잔금 중 7,500만원은 주택도시기금 융자 가능" }
+    "잔금": {
+      "ratio": 0.3,
+      "label": "잔금 30%",
+      "when": "입주 시",
+      "housingFund": 75000000,
+      "housingFundNote": "잔금 중 7,500만원은 주택도시기금 융자 가능"
+    }
   },
   "units": [
-    { "type": "84A", "code": "084.9794A", "exclusiveArea": 84.9794, "households": 72,
+    {
+      "type": "84A",
+      "code": "084.9794A",
+      "exclusiveArea": 84.9794,
+      "households": 72,
       "floors": [
-        { "tier": "1층", "households": 4, "price": 761600000 },
-        { "tier": "2층", "households": 4, "price": 769600000 },
-        { "tier": "3층", "households": 4, "price": 777600000 },
-        { "tier": "4층", "households": 4, "price": 785600000 },
-        { "tier": "5-9층", "households": 20, "price": 793600000 },
-        { "tier": "10층 이상", "households": 36, "price": 801700000 }
-      ] },
-    { "type": "84B", "code": "084.9830B", "exclusiveArea": 84.9830, "households": 70,
+        {
+          "tier": "1층",
+          "households": 4,
+          "price": 761600000
+        },
+        {
+          "tier": "2층",
+          "households": 4,
+          "price": 769600000
+        },
+        {
+          "tier": "3층",
+          "households": 4,
+          "price": 777600000
+        },
+        {
+          "tier": "4층",
+          "households": 4,
+          "price": 785600000
+        },
+        {
+          "tier": "5-9층",
+          "households": 20,
+          "price": 793600000
+        },
+        {
+          "tier": "10층 이상",
+          "households": 36,
+          "price": 801700000
+        }
+      ]
+    },
+    {
+      "type": "84B",
+      "code": "084.9830B",
+      "exclusiveArea": 84.983,
+      "households": 70,
       "floors": [
-        { "tier": "1층", "households": 2, "price": 752400000 },
-        { "tier": "2층", "households": 4, "price": 760300000 },
-        { "tier": "3층", "households": 4, "price": 768200000 },
-        { "tier": "4층", "households": 4, "price": 776100000 },
-        { "tier": "5-9층", "households": 20, "price": 784100000 },
-        { "tier": "10층 이상", "households": 36, "price": 792000000 }
-      ] },
-    { "type": "84C", "code": "084.9548C", "exclusiveArea": 84.9548, "households": 51,
+        {
+          "tier": "1층",
+          "households": 2,
+          "price": 752400000
+        },
+        {
+          "tier": "2층",
+          "households": 4,
+          "price": 760300000
+        },
+        {
+          "tier": "3층",
+          "households": 4,
+          "price": 768200000
+        },
+        {
+          "tier": "4층",
+          "households": 4,
+          "price": 776100000
+        },
+        {
+          "tier": "5-9층",
+          "households": 20,
+          "price": 784100000
+        },
+        {
+          "tier": "10층 이상",
+          "households": 36,
+          "price": 792000000
+        }
+      ]
+    },
+    {
+      "type": "84C",
+      "code": "084.9548C",
+      "exclusiveArea": 84.9548,
+      "households": 51,
       "floors": [
-        { "tier": "1층", "households": 2, "price": 748500000 },
-        { "tier": "2층", "households": 3, "price": 756300000 },
-        { "tier": "3층", "households": 3, "price": 764200000 },
-        { "tier": "4층", "households": 3, "price": 772100000 },
-        { "tier": "5-9층", "households": 15, "price": 780000000 },
-        { "tier": "10층 이상", "households": 25, "price": 787900000 }
-      ] },
-    { "type": "84D", "code": "084.9603D", "exclusiveArea": 84.9603, "households": 151, "isModel": true,
+        {
+          "tier": "1층",
+          "households": 2,
+          "price": 748500000
+        },
+        {
+          "tier": "2층",
+          "households": 3,
+          "price": 756300000
+        },
+        {
+          "tier": "3층",
+          "households": 3,
+          "price": 764200000
+        },
+        {
+          "tier": "4층",
+          "households": 3,
+          "price": 772100000
+        },
+        {
+          "tier": "5-9층",
+          "households": 15,
+          "price": 780000000
+        },
+        {
+          "tier": "10층 이상",
+          "households": 25,
+          "price": 787900000
+        }
+      ]
+    },
+    {
+      "type": "84D",
+      "code": "084.9603D",
+      "exclusiveArea": 84.9603,
+      "households": 151,
+      "isModel": true,
       "floors": [
-        { "tier": "1층", "households": 7, "price": 760800000 },
-        { "tier": "2층", "households": 9, "price": 768800000 },
-        { "tier": "3층", "households": 9, "price": 776800000 },
-        { "tier": "4층", "households": 9, "price": 784800000 },
-        { "tier": "5-9층", "households": 45, "price": 792800000 },
-        { "tier": "10층 이상", "households": 72, "price": 800800000 }
-      ] }
+        {
+          "tier": "1층",
+          "households": 7,
+          "price": 760800000
+        },
+        {
+          "tier": "2층",
+          "households": 9,
+          "price": 768800000
+        },
+        {
+          "tier": "3층",
+          "households": 9,
+          "price": 776800000
+        },
+        {
+          "tier": "4층",
+          "households": 9,
+          "price": 784800000
+        },
+        {
+          "tier": "5-9층",
+          "households": 45,
+          "price": 792800000
+        },
+        {
+          "tier": "10층 이상",
+          "households": 72,
+          "price": 800800000
+        }
+      ]
+    }
   ],
   "options": {
     "balcony": {
       "title": "발코니 확장 공사비",
       "note": "부가세 포함 / 계약금 20% + 잔금 80% / 일괄 확장 전제(실별 선택 불가)",
-      "byType": { "84A": 4811000, "84B": 4768000, "84C": 4248000, "84D": 5020000 },
-      "payment": { "계약금": 0.2, "잔금": 0.8 }
+      "byType": {
+        "84A": 4811000,
+        "84B": 4768000,
+        "84C": 4248000,
+        "84D": 5020000
+      },
+      "payment": {
+        "계약금": 0.2,
+        "잔금": 0.8
+      }
     },
     "aircon": {
       "title": "천장형 시스템 에어컨 (추가선택품목 Ⅱ)",
       "note": "부가세 포함 / 계약금 10% + 중도금 30% + 잔금 60% / 홈네트워크·와이파이 포함",
-      "payment": { "계약금": 0.1, "중도금": 0.3, "잔금": 0.6 },
+      "payment": {
+        "계약금": 0.1,
+        "중도금": 0.3,
+        "잔금": 0.6
+      },
       "items": [
-        { "id": "lg-std-2", "label": "LG/삼성 일반형 · 거실+침실1 (2대)", "price": 3700000 },
-        { "id": "lg-std-4", "label": "LG/삼성 일반형 · 거실+침실1·2·3 (4대)", "price": 6600000 },
-        { "id": "lg-prm-2", "label": "LG 프리미엄형 · 거실+침실1 (2대)", "price": 4100000 },
-        { "id": "lg-prm-4", "label": "LG 프리미엄형 · 거실+침실1·2·3 (4대)", "price": 7400000 }
+        {
+          "id": "lg-std-2",
+          "label": "LG/삼성 일반형 · 거실+침실1 (2대)",
+          "price": 3700000
+        },
+        {
+          "id": "lg-std-4",
+          "label": "LG/삼성 일반형 · 거실+침실1·2·3 (4대)",
+          "price": 6600000
+        },
+        {
+          "id": "lg-prm-2",
+          "label": "LG 프리미엄형 · 거실+침실1 (2대)",
+          "price": 4100000
+        },
+        {
+          "id": "lg-prm-4",
+          "label": "LG 프리미엄형 · 거실+침실1·2·3 (4대)",
+          "price": 7400000
+        }
       ]
     }
   },
@@ -126,16 +382,62 @@
     },
     "rank1": "주택청약종합저축 가입 24개월 경과 + 24회 이상 납입 (투기과열지구·청약과열지역 국민주택 기준)",
     "rank2": "입주자저축에 가입했으나 1순위에 해당하지 않는 무주택세대구성원",
-    "incomeBase100": { "3인이하": 7533763, "4인": 8802202, "5인": 9326985, "6인": 9906263, "7인": 10485541, "8인": 11064819 },
+    "incomeBase100": {
+      "3인이하": 7533763,
+      "4인": 8802202,
+      "5인": 9326985,
+      "6인": 9906263,
+      "7인": 10485541,
+      "8인": 11064819
+    },
     "specialSupply": [
-      { "type": "기관추천", "income": null, "asset": false, "savings": "불필요 (국가유공자·장애인·철거민 포함)" },
-      { "type": "다자녀가구", "income": 120, "incomeDual": 200, "asset": true, "savings": "가입 6개월 + 6회 이상" },
-      { "type": "신혼부부", "income": 130, "incomeDual": 200, "asset": true, "savings": "가입 6개월 + 6회 이상" },
-      { "type": "생애최초", "income": 130, "incomeDual": 200, "asset": true, "savings": "가입 6개월 + 6회 이상 · 선납금 600만원 이상" },
-      { "type": "노부모부양", "income": 120, "incomeDual": 200, "asset": true, "savings": "가입 24개월 + 24회 이상" },
-      { "type": "신생아", "income": 140, "incomeDual": 200, "asset": true, "savings": "가입 6개월 + 6회 이상" }
+      {
+        "type": "기관추천",
+        "income": null,
+        "asset": false,
+        "savings": "불필요 (국가유공자·장애인·철거민 포함)"
+      },
+      {
+        "type": "다자녀가구",
+        "income": 120,
+        "incomeDual": 200,
+        "asset": true,
+        "savings": "가입 6개월 + 6회 이상"
+      },
+      {
+        "type": "신혼부부",
+        "income": 130,
+        "incomeDual": 200,
+        "asset": true,
+        "savings": "가입 6개월 + 6회 이상"
+      },
+      {
+        "type": "생애최초",
+        "income": 130,
+        "incomeDual": 200,
+        "asset": true,
+        "savings": "가입 6개월 + 6회 이상 · 선납금 600만원 이상"
+      },
+      {
+        "type": "노부모부양",
+        "income": 120,
+        "incomeDual": 200,
+        "asset": true,
+        "savings": "가입 24개월 + 24회 이상"
+      },
+      {
+        "type": "신생아",
+        "income": 140,
+        "incomeDual": 200,
+        "asset": true,
+        "savings": "가입 6개월 + 6회 이상"
+      }
     ],
     "generalIncome": 140,
-    "asset": { "부동산": 215500000, "자동차": 45420000, "appliesTo": "다자녀·신혼부부·생애최초·노부모부양·신생아 특별공급" }
+    "asset": {
+      "부동산": 215500000,
+      "자동차": 45420000,
+      "appliesTo": "다자녀·신혼부부·생애최초·노부모부양·신생아 특별공급"
+    }
   }
 }

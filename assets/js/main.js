@@ -17,6 +17,7 @@ window.fmt = { won, eok, fmtDate };
 
 window.dataReady.then((data) => {
   window.__DATA = data;
+  renderAds(data.meta);
   renderHero(data);
   renderInfo(data);
   renderShow(data);
@@ -24,6 +25,30 @@ window.dataReady.then((data) => {
   renderCountdown(data);
   document.dispatchEvent(new CustomEvent("data:ready", { detail: data }));
 });
+
+/* Google AdSense — meta.adsense.client(ca-pub-…)가 있을 때만 동작.
+   slots(inContent1/inContent2)가 있으면 본문 광고 유닛, 없으면 자동광고(대시보드 설정)로 노출. */
+function renderAds(m) {
+  const ad = m && m.adsense;
+  if (!ad || !ad.client) return;
+  const loader = document.createElement("script");
+  loader.async = true;
+  loader.crossOrigin = "anonymous";
+  loader.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + ad.client;
+  document.head.appendChild(loader);
+  const slots = ad.slots || {};
+  const place = (afterId, slotId) => {
+    const sec = document.getElementById(afterId);
+    if (!sec || !slotId) return;
+    const wrap = document.createElement("div");
+    wrap.className = "ad-wrap wrap";
+    wrap.innerHTML = `<ins class="adsbygoogle" style="display:block" data-ad-client="${ad.client}" data-ad-slot="${slotId}" data-ad-format="auto" data-full-width-responsive="true"></ins>`;
+    sec.after(wrap);
+    try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
+  };
+  place("info", slots.inContent1);
+  place("calc", slots.inContent2);
+}
 
 fetch("./data/clauses.json").then((r) => r.json()).then(renderClauses).catch(() => {});
 
@@ -36,14 +61,15 @@ function renderHero(d) {
     tl.innerHTML = m.transport.map((t) =>
       `<div class="tp"><div class="tp-ic">${t.icon || "📍"}</div><div><div class="tp-t">${t.title}</div><div class="tp-d">${t.desc || ""}</div></div></div>`).join("");
   }
+  const dom = (u) => (u || "").replace(/^https?:\/\//, "").replace(/\/$/, "");
   const ftTop = document.getElementById("ftTop");
-  if (ftTop) ftTop.textContent = `🌲 ${m.projectName} (${m.block})`;
+  if (ftTop) ftTop.textContent = `${m.leafEmoji || "🏢"} ${m.projectName} (${m.block})`;
   const ftc = document.getElementById("ftContact");
-  if (ftc) ftc.textContent = `분양 문의(견본주택) ☎ ${m.consultTel} · 청약 상담은 청약홈 콜센터 이용`;
+  if (ftc) ftc.textContent = `분양 문의(견본주택) ☎ ${m.consultTel} · 청약 상담은 청약 콜센터 이용`;
   const fts = document.getElementById("ftSites");
-  if (fts) fts.innerHTML = `공식 홈페이지 <a href="${m.officialSite}" target="_blank" rel="noopener">${m.officialSite.replace(/^https?:\/\//, "")}</a> · 청약홈 <a href="${m.applyHome}" target="_blank" rel="noopener">applyhome.co.kr</a>`;
+  if (fts) fts.innerHTML = `공식 홈페이지 <a href="${m.officialSite}" target="_blank" rel="noopener">${dom(m.officialSite)}</a> · 청약 <a href="${m.applyHome}" target="_blank" rel="noopener">${dom(m.applyHome)}</a>`;
   document.getElementById("heroMeta").innerHTML = [
-    ["📍 위치", "경기 안양시 동안구 관양동"],
+    ["📍 위치", m.shortLocation || m.location],
     ["🏢 규모", `${m.scale} · ${m.totalHouseholds}세대`],
     ["📐 전용", m.exclusiveArea],
     ["🏗️ 입주", m.moveInPlan],
@@ -53,7 +79,7 @@ function renderHero(d) {
 function renderInfo(d) {
   const m = d.meta;
   document.getElementById("infoCards").innerHTML = [
-    ["🏠", "공급규모", `${m.totalHouseholds}세대`, "전용 84㎡ 국민주택"],
+    ["🏠", "공급규모", `${m.totalHouseholds}세대`, m.exclusiveArea],
     ["🏷️", "분양 유형", "공공분양", m.priceCap],
     ["⛔", "전매제한", d.meta.rules.전매제한, `재당첨제한 ${m.rules.재당첨제한}`],
     ["🏗️", "입주 예정", "2028.08", "공정에 따라 변동"],
