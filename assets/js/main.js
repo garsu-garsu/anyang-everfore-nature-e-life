@@ -29,6 +29,19 @@ fetch("./data/clauses.json").then((r) => r.json()).then(renderClauses).catch(() 
 
 function renderHero(d) {
   const m = d.meta;
+  const sub = document.getElementById("heroSub");
+  if (sub) sub.textContent = m.heroSubtitle || "";
+  const tl = document.getElementById("transportList");
+  if (tl && Array.isArray(m.transport)) {
+    tl.innerHTML = m.transport.map((t) =>
+      `<div class="tp"><div class="tp-ic">${t.icon || "📍"}</div><div><div class="tp-t">${t.title}</div><div class="tp-d">${t.desc || ""}</div></div></div>`).join("");
+  }
+  const ftTop = document.getElementById("ftTop");
+  if (ftTop) ftTop.textContent = `🌲 ${m.projectName} (${m.block})`;
+  const ftc = document.getElementById("ftContact");
+  if (ftc) ftc.textContent = `분양 문의(견본주택) ☎ ${m.consultTel} · 청약 상담은 청약홈 콜센터 이용`;
+  const fts = document.getElementById("ftSites");
+  if (fts) fts.innerHTML = `공식 홈페이지 <a href="${m.officialSite}" target="_blank" rel="noopener">${m.officialSite.replace(/^https?:\/\//, "")}</a> · 청약홈 <a href="${m.applyHome}" target="_blank" rel="noopener">applyhome.co.kr</a>`;
   document.getElementById("heroMeta").innerHTML = [
     ["📍 위치", "경기 안양시 동안구 관양동"],
     ["🏢 규모", `${m.scale} · ${m.totalHouseholds}세대`],

@@ -40,7 +40,7 @@
   <div class="wrap hero-inner">
     <span class="tag">경기도 안양시 동안구 관양동 · 분양가상한제 적용</span>
     <h1>안양 에버포레<br /><span class="accent">자연&amp; e편한세상</span> <span style="font-size:.6em;opacity:.8">A2BL</span></h1>
-    <p class="sub">전용 84㎡ 국민주택(공공분양) 344세대 · 청약 일정부터 분양가·자격까지 한곳에서 확인하세요.</p>
+    <p class="sub" id="heroSub"></p>
     <div class="hero-meta" id="heroMeta"></div>
     <div class="hero-cta">
       <a href="#calc" class="btn btn-primary">💰 분양가·납부 계산하기</a>
@@ -77,12 +77,7 @@
     <div class="grid cols-2">
       <div class="card">
         <h3>🚆 교통 · 입지</h3>
-        <div class="transport-list" style="margin-top:14px">
-          <div class="tp"><div class="tp-ic">🏙️</div><div><div class="tp-t">안양 관양동 도시개발사업지구</div><div class="tp-d">관양고 주변 신규 개발 블록(A2BL) 내 공공분양 단지</div></div></div>
-          <div class="tp"><div class="tp-ic">🚇</div><div><div class="tp-t">인덕원역 생활권 (4호선·인덕원동탄선·GTX-C 예정)</div><div class="tp-d">인덕원역 일대 광역교통망 확충 계획 지역</div></div></div>
-          <div class="tp"><div class="tp-ic">🛣️</div><div><div class="tp-t">과천대로·평촌 생활 인프라</div><div class="tp-d">평촌 학원가·상권 및 주요 간선도로 접근</div></div></div>
-          <div class="tp"><div class="tp-ic">🏫</div><div><div class="tp-t">교육 · 녹지 환경</div><div class="tp-d">관양고 인근, 자연 친화형 단지 컨셉</div></div></div>
-        </div>
+        <div class="transport-list" id="transportList" style="margin-top:14px"></div>
         <div class="disclaimer" style="margin-top:14px">교통·입지 정보는 일반 안내이며, 정확한 노선·개통 시기는 관계기관 공식 자료를 확인하세요.</div>
       </div>
       <div class="card">
@@ -223,9 +218,9 @@
 
 <footer>
   <div class="wrap">
-    <div class="ft-top">🌲 안양 에버포레 자연&amp; e편한세상 (A2BL)</div>
-    <div>분양 문의(견본주택) ☎ 031-386-1210 · 청약 상담은 청약홈 콜센터 이용</div>
-    <div>공식 홈페이지 <a href="https://www.elife.co.kr" target="_blank" rel="noopener">www.elife.co.kr</a> · 청약홈 <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener">www.applyhome.co.kr</a></div>
+    <div class="ft-top" id="ftTop"></div>
+    <div id="ftContact"></div>
+    <div id="ftSites"></div>
     <div style="margin-top:12px;opacity:.7;font-size:.82rem">본 사이트는 입주자모집공고를 알기 쉽게 정리한 비공식 안내 페이지입니다. 모든 청약 자격·금액·일정의 법적 기준은 공식 입주자모집공고문을 따릅니다. 계산기·자격체크 결과는 참고용입니다.</div>
   </div>
 </footer>
